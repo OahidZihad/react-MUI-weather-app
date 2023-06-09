@@ -1,10 +1,11 @@
 import axios from 'axios';
-import { Container, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import CityNCountry from './Components/CityNCountry';
 import WeatherInfo from './Components/WeatherInfo';
 import './App.css';
 import Loader from './Components/Loader';
+import LandingPage from './LandingPage/LandingPage';
 
 function App() {
   const [city, setCity] = useState();
@@ -52,12 +53,13 @@ function App() {
   }
 
   return (
-    <Container>
-        <CityNCountry setCity={setCity} />
+    <Box>
+        {/* <CityNCountry setCity={setCity} />
         {
           weather && <WeatherInfo weather={weather} />
-        }
-    </Container>
+        } */}
+          <LandingPage />
+    </Box>
   );
 }
 
